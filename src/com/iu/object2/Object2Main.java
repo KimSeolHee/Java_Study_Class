@@ -16,10 +16,10 @@ public class Object2Main {
 		
 //		System.out.println(num); test()안의 지역변수는 호출 후 사라짐.
 		
-		System.out.println("\n프로그램 종료");
-	
 		Method2 mt2 = new Method2();
 		mt2.info();
+		
+		System.out.println("\n프로그램 종료");
 		
 	}
 	
