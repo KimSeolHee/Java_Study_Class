@@ -37,7 +37,7 @@ public class ObjectMain {
 		sword.damage = 10;
 		sword.inchant = 1;
 		
-		monster.weapon = sword;
+		monster.weapon = sword;//같은 타입끼리 담을 수 있다.
 		
 		System.out.println(monster.weapon.name);
 		
