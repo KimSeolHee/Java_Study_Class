@@ -23,7 +23,6 @@ public class StudentController {
 			}else if(num == 2) {
 				System.out.println("2-학생정보를 조회해주세요");
 				view.viewAll(students);
-				view.viewMessage("검색 할 대상이 없습니다.");
 			}else if(num == 3) {
 				System.out.println("3-학생정보를 검색해주세요");
 				student = service.findStudent(students);
