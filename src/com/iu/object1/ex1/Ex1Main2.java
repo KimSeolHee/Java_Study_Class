@@ -14,12 +14,12 @@ public class Ex1Main2 {
 		for(int i = 0;i < students.length;i++) {
 			System.out.println("이름입력");
 			st = new Student(); // 객체가 총 3번 생성되어야 한다!
-			st.name=sc.next();
+			st.setName(sc.next());
 			students[i] = st;
 		}
 		
 		for(int i = 0;i < students.length;i++) {
-			System.out.println("이름: " + students[i].name);
+			System.out.println("이름: " + students[i].getName());
 		}
 			
 		

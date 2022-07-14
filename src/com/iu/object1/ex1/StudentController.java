@@ -7,14 +7,11 @@ public class StudentController {
 	StudentService service;
 	StudentView view;
 	Student [] students;
-	Student student;
 	
 	public StudentController() {
 		sc = new Scanner(System.in);
 		service = new StudentService();
 		view = new StudentView();
-		students = null;
-		student = new Student();
 	}
 
 	//start 메서드를 선언
@@ -32,6 +29,7 @@ public class StudentController {
 				System.out.println("2-학생정보를 조회해주세요");
 				view.viewAll(students);
 			}else if(num == 3) {
+				Student student = new Student();
 				System.out.println("3-학생정보를 검색해주세요");
 				student = service.findStudent(students);
 				if(student != null) {
@@ -43,6 +41,7 @@ public class StudentController {
 				System.out.println("4-학생정보를 삭제해주세요");
 			}else if(num == 5) {
 				System.out.println("5-학생정보를 추가해주세요");
+				students = service.addStudent(students);
 			}else {
 				System.out.println("프로그램 종료");
 				check = false;

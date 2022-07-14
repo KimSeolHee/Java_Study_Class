@@ -20,20 +20,20 @@ public class StudentView {
 		
 		for(int i = 0;i < students.length;i++) {
 			System.out.println("이름\t번호\t총점\t평균");
-			System.out.print(students[i].name+"\t");
-			System.out.print(students[i].num+"\t");
-			System.out.print(students[i].total+"\t");
-			System.out.println(students[i].average);
+			System.out.print(students[i].getName()+"\t");
+			System.out.print(students[i].getNum()+"\t");
+			System.out.print(students[i].getTotal()+"\t");
+			System.out.println(students[i].getAverage());
 			System.out.println("====================================");
 		}
 	}
 	
 	public void viewOne(Student student) {
 		System.out.println("이름\t국어\t영어\t수학");
-		System.out.print(student.name+"\t");
-		System.out.print(student.kor+"\t");
-		System.out.print(student.eng+"\t");
-		System.out.println(student.math);
+		System.out.print(student.getName()+"\t");
+		System.out.print(student.getKor()+"\t");
+		System.out.print(student.getEng()+"\t");
+		System.out.println(student.getMath());
 		System.out.println("====================================");
 	}
 	

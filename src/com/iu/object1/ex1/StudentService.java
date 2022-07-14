@@ -38,15 +38,15 @@ public class StudentService {
 			Student student = new Student();
 			
 			System.out.println("이름을 입력하세요.");
-			student.name = sc.next();
+			student.setName(sc.next());
 			System.out.println("번호를 입력하세요.");
-			student.num = sc.nextInt();
+			student.setNum(sc.nextInt());
 			System.out.println("국어점수를 입력하세요.");
-			student.kor = sc.nextInt();
+			student.setKor(sc.nextInt());
 			System.out.println("영어점수를 입력하세요.");
-			student.eng = sc.nextInt();
+			student.setEng(sc.nextInt());
 			System.out.println("수학점수를 입력하세요.");
-			student.math = sc.nextInt();
+			student.setMath(sc.nextInt());
 			student.setTotal();
 			
 			students[i] = student; 
@@ -61,7 +61,7 @@ public class StudentService {
 		
 		Student student = null;
 		for(int i = 0;i < students.length;i++) {
-			if(num == students[i].num) {
+			if(num == students[i].getNum()) {
 				student = students[i];
 				break;
 			}
@@ -69,44 +69,46 @@ public class StudentService {
 		return student;
 	}
 	
-	//addStudent
-	//학생 한명 추가
-	//학생들의 정보를 받아서
-	//학생들의 정보 리턴
+
 	
-//	public Student[] addStudent(Student [] studnets) {
-//		
-//		System.out.println("학생정보를 추가하세요.");
-//		Student [] copyStudents = new Student[students.length+1];
-//		
-//		Student student = new Student();
-//		
-//		
-//		
-//		for(int i = 0;i < students.length;i++) {
-//			copyStudents[i] = students[i]; 
-//		}
-//		
-//		Student student = new Student();
-//		System.out.println("이름을 입력하세요.");
-//		student.name = sc.next();
-//		System.out.println("번호를 입력하세요.");
-//		student.num = sc.nextInt();
-//		System.out.println("국어점수를 입력하세요.");
-//		student.kor = sc.nextInt();
-//		System.out.println("영어점수를 입력하세요.");
-//		student.eng = sc.nextInt();
-//		System.out.println("수학점수를 입력하세요.");
-//		student.math = sc.nextInt();
-//		student.setTotal();
-//		
-//		copyStudents[students.length] = student;
-//		students = copyStudents;
-//		
-//		return students;
-//	}
-//	
-//}
+	//addStudent
+	//새로운 배열을 만든다
+	//새로운 배열안에 기존 배열정보를 넣는다.
+	//학생정보입력(기존과 동일)
+	//새로 만든 배열을 기존 배열에 주소값을 넣는다.
+	//새로운 배열 마지막 부분에 새로운 student 정보가 담긴 주소값을 넣어줌
+	//마지막으로 배열 정보를 리턴해준다.
+	
+	public Student[] addStudent(Student[] students) {
+		System.out.println("추가할 학생을 입력해주세요.");
+		
+		Student [] copyStudents = new Student[students.length+1];
+		
+		for(int i = 0;i < students.length;i++) {
+			copyStudents[i] = students[i];
+		}
+		
+		Student student = new Student();
+		System.out.println("학생이름");
+		student.setName(sc.next());
+		System.out.println("번호를 입력하세요.");
+		student.setNum(sc.nextInt());
+		System.out.println("국어점수를 입력하세요.");
+		student.setKor(sc.nextInt());
+		System.out.println("영어점수를 입력하세요.");
+		student.setEng(sc.nextInt());
+		System.out.println("수학점수를 입력하세요.");
+		student.setMath(sc.nextInt());
+		student.setTotal();
+		
+		students = copyStudents;
+		
+		students[students.length] = student;
+		
+		return students;
+	}
+	
+}
 
 
 
