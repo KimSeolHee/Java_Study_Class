@@ -3,16 +3,24 @@ package com.iu.object1.ex1;
 import java.util.Scanner;
 
 public class StudentController {
+	Scanner sc;
+	StudentService service;
+	StudentView view;
+	Student [] students;
+	Student student;
+	
+	public StudentController() {
+		sc = new Scanner(System.in);
+		service = new StudentService();
+		view = new StudentView();
+		students = null;
+		student = new Student();
+	}
 
 	//start 메서드를 선언
 	//하는일 : System.out.println("1. 학생정보 입력 2. 학생정보 조회 3. 학생정보 검색 4. 학생정보 삭제 5. 학생정보 추가 6. 프로그램 종료");
 	
 	public void start() {
-		Scanner sc = new Scanner(System.in);
-		StudentService service = new StudentService();
-		StudentView view = new StudentView();
-		Student [] students= null;
-		Student student = new Student();
 		boolean check = true;
 		while(check) {
 			System.out.println("\n1. 학생정보 입력 2. 학생정보 조회 3. 학생정보 검색 4. 학생정보 삭제 5. 학생정보 추가 6. 프로그램 종료");

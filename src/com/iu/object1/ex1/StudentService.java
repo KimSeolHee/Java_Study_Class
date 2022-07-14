@@ -3,6 +3,12 @@ package com.iu.object1.ex1;
 import java.util.Scanner;
 
 public class StudentService {
+	
+	Scanner sc;
+	
+	public StudentService() {
+		this.sc = new Scanner(System.in);
+	}
 
 	//makeStudents메서드
 	//인원수 입력받고,
@@ -18,7 +24,6 @@ public class StudentService {
 	
 	
 	public Student [] makeStudents() {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("학생수를 입력하세요.");
 		int count = sc.nextInt();
 		
@@ -37,8 +42,7 @@ public class StudentService {
 			student.eng = sc.nextInt();
 			System.out.println("수학점수를 입력하세요.");
 			student.math = sc.nextInt();
-			student.total = student.kor+student.eng+student.math;
-			student.average = student.total / 3;
+			student.setTotal();
 			
 			students[i] = student; 
 		}
@@ -47,7 +51,6 @@ public class StudentService {
 	
 	
 	public Student findStudent(Student [] students) {
-		Scanner sc = new Scanner(System.in);
 		System.out.println("번호를 입력하세요");
 		int num =sc.nextInt();
 		

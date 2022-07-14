@@ -19,7 +19,7 @@ public class StudentView {
 	public void viewAll(Student [] students) {	
 		
 		for(int i = 0;i < students.length;i++) {
-			System.out.println("이름\t국어\t영어\t수학");
+			System.out.println("이름\t번호\t총점\t평균");
 			System.out.print(students[i].name+"\t");
 			System.out.print(students[i].num+"\t");
 			System.out.print(students[i].total+"\t");
