@@ -10,6 +10,11 @@ public class StudentService {
 		this.sc = new Scanner(System.in);
 	}
 
+	//addStudent
+	//학생 한명 추가
+	//학생들의 정보를 받아서
+	//학생들의 정보 리턴
+	
 	//makeStudents메서드
 	//인원수 입력받고,
 	//학생수 만큼 정보를 입력받고, 
@@ -22,10 +27,10 @@ public class StudentService {
 	//같은 번호의 학생을 찾아서 그 학생을한명을 리턴
 	//없으면 널을 리턴하세요.
 	
-	
+	int count;
 	public Student [] makeStudents() {
 		System.out.println("학생수를 입력하세요.");
-		int count = sc.nextInt();
+		count = sc.nextInt();
 		
 		Student [] students = new Student[count];
 		
@@ -64,4 +69,54 @@ public class StudentService {
 		return student;
 	}
 	
-}
+	//addStudent
+	//학생 한명 추가
+	//학생들의 정보를 받아서
+	//학생들의 정보 리턴
+	
+//	public Student[] addStudent(Student [] studnets) {
+//		
+//		System.out.println("학생정보를 추가하세요.");
+//		Student [] copyStudents = new Student[students.length+1];
+//		
+//		Student student = new Student();
+//		
+//		
+//		
+//		for(int i = 0;i < students.length;i++) {
+//			copyStudents[i] = students[i]; 
+//		}
+//		
+//		Student student = new Student();
+//		System.out.println("이름을 입력하세요.");
+//		student.name = sc.next();
+//		System.out.println("번호를 입력하세요.");
+//		student.num = sc.nextInt();
+//		System.out.println("국어점수를 입력하세요.");
+//		student.kor = sc.nextInt();
+//		System.out.println("영어점수를 입력하세요.");
+//		student.eng = sc.nextInt();
+//		System.out.println("수학점수를 입력하세요.");
+//		student.math = sc.nextInt();
+//		student.setTotal();
+//		
+//		copyStudents[students.length] = student;
+//		students = copyStudents;
+//		
+//		return students;
+//	}
+//	
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
