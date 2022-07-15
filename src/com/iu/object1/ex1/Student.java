@@ -1,6 +1,8 @@
 package com.iu.object1.ex1;
 
 public class Student {
+	
+	//리턴타입이 boolean이면 isXXX으로 시작함.
 
 	private String name;
 	private int num;

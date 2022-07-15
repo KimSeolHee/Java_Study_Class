@@ -69,6 +69,50 @@ public class StudentService {
 		return student;
 	}
 	
+	
+	//removeStudent
+	//학생들의 정보를 받는다.매개변수에서 학생들 배열의 정보들을 받는다.
+	//삭제하려는 학생의 번호를 입력받아서
+	//학생의 배열길이까지 입력받은 번호와 학생의 번호를 비교한다.
+	//번호가 같으면 true가 되어 빠져나간다.(아래코드를 실행하기위해)
+	//true일때 삭제된 새로운 배열을 만들어서 
+	//새로운 삭제된 배열을 돌리는데
+	//만약에 삭제할번호와 일치한 배열 제외하고 다 기존배열에 있는걸 새로운 배열[index]에 넘기고
+	//일치한 번호를 가진 애들은 제외할때 그냥 다시 올라간다continue;
+	//새로운 배열을 기존배열에 넘기고 
+	//기존배열을 리턴한다.
+	
+	public Student[] removeStudent(Student[] students) {
+		System.out.println("삭제할 번호를 입력하세요.");
+		int deleteNum = sc.nextInt();
+		
+		boolean flag = false;
+		int i;
+		for(i = 0;i<students.length;i++) {
+			if(deleteNum == students[i].getNum()) {
+				flag = !flag;
+				break;
+			}
+		}
+		
+		if(flag) {
+			Student[] copyStudent = new Student[students.length-1];
+			
+			int index = 0;
+			for(int j = 0;j < students.length;j++) {
+				if(i == j) {
+					continue;
+				}
+				copyStudent[index] = students[j];
+				index++;
+			}
+			students = copyStudent;
+		}
+		return students;
+	}
+	
+	
+	
 
 	
 	//addStudent
@@ -101,9 +145,9 @@ public class StudentService {
 		student.setMath(sc.nextInt());
 		student.setTotal();
 		
-		students = copyStudents;
+		copyStudents[students.length] = student;
 		
-		students[students.length] = student;
+		students = copyStudents;
 		
 		return students;
 	}

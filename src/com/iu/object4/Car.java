@@ -27,7 +27,7 @@ public class Car {
 	//생성자내에서 또다른 생성자를 생성할때 this();
 	public Car() {
 		this("red");
-//		this.color = "green";
+		this.color = "green";
 	}
 	
 	public Car(String color, String brand) {

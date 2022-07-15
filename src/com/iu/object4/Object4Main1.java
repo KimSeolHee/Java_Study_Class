@@ -9,14 +9,9 @@ public class Object4Main1 {
 //		re.Resume(); XXXXXXXX
 		
 		Car car1 = new Car();
-		Car car2 = new Car("black");
-		Car car3 = new Car("orenge", "k5");
-		Car car4 = new Car();
-		
+ 	
 		car1.info();
-		car2.info();
-		car3.info();
-		car4.info();
+
 		
 
 	}

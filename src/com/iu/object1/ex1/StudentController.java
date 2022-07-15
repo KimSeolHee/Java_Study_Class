@@ -39,9 +39,12 @@ public class StudentController {
 				}
 			}else if(num == 4) {
 				System.out.println("4-학생정보를 삭제해주세요");
+				students = service.removeStudent(students);
+				
 			}else if(num == 5) {
 				System.out.println("5-학생정보를 추가해주세요");
 				students = service.addStudent(students);
+				
 			}else {
 				System.out.println("프로그램 종료");
 				check = false;
